@@ -140,7 +140,8 @@ int j=0;
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-for(i=0;i<(600);i++)    //THE LAST SEVERAL OUTPUTS HAVE A REPEATING END BECAUSE THEY GO BEYOND THE 600 LIMIT OF THE PI STRING, WHICH CAN BE LENGTHENED TO INFINITY IF YOU WANT
+for(i=0;i<(600);i++)    //THE LAST SEVERAL OUTPUTS HAVE A REPEATING END BECAUSE THEY GO BEYOND THE 600 LIMIT OF THE PI STRING, WHICH CAN BE LENGTHENED TO INFINITY IF YOU WANT, SHOULD PROBABLY CHANGE
+                        // THIS TO i < size of PI vals array - length of ciphertext
 
 {
 cout << i << "          ";   //USE THIS IS IF YOU WANT TO ADD A LINE NUMBER TO EACH OUTPUT
