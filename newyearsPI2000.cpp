@@ -150,7 +150,7 @@ int j=0;
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-for(i=0;i<(600);i++)    // THIS IS HOW MANY TIMES WE GO THROUGH PI, ONE DIGIT AT A TIME. WE CAN INCREASE THIS TO INFINITY.
+for(i=0;i<(1900);i++)    // THIS IS HOW MANY TIMES WE GO THROUGH PI, ONE DIGIT AT A TIME. WE CAN INCREASE THIS TO INFINITY.
 
 {
 cout << i << "          ";   //USE THIS IS IF YOU WANT TO ADD A LINE NUMBER TO EACH OUTPUT
