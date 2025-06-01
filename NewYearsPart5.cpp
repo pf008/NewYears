@@ -1,6 +1,5 @@
 /********************************************************************************************************************************************************
-
-THIS PROGRAM WILL HELP SOLVE THE NEW YEARS CHALLENGES 1 THROUGH 5.  SPECIFICALLY ALTERED FOR PART 5, TO REPEAT 26 PI VALUES FOR ENTIRE CIPHER STRING.
+THIS PROGRAM WILL HELP SOLVE THE NEW YEARS CHALLENGES 1 THROUGH 5.
 IT OUTPUTS 4 VARIATIONS OF EACH CODE, DEPENDING ON YOUR CHOICE.
 
 1. CIPHERTEXT FORWARD, PI VALUES FORWARD
@@ -65,7 +64,9 @@ int j=0;
 
    string alphabet1="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    string codestring="JMXFDPYXNNVICTKKEATTVLDUSMRQFBXXDZPETBSMYLDKTQMKEAYUGFSYFLZGLCHYUGYGLUAMNPZDKJKXRHKYRXWUKFTQVFXMDNCROEMWAQZVUGVMADCUFZCHLJBIFVUCOMFZBTRRZUDAXVVQBTLSJYQZMFFPVIKXWIYKUOPBYQJFGBOXCPUNMNVXCPBBMNLTCXRJXVMMLCP";
+   //string codestring="RQFBXXDZPETBSMYLDKTQMKEAYUGFSYFLZGLCHYUGYGLUAMNPZDKJKXRHKYRXWUKFTQVFXMDNCROEMWAQZVUGVMADCUFZCHLJBIFVUCOMFZBTRRZUDAXVVQBTLSJYQZMFFPVIKXWIYKUOPBYQJFGBOXCPUNMNVXCPBBMNLTCXRJXVMMLCP";
+
+   string codestring="JMXFDPYXNNVICTKKEATTVLDUSMRQFBXXDZPETBSMYLDKTQMKEAYUGFSYFLZGLCHYUGYGLUAMNPZDKJKXRHKYRXWUKFTQVFXMDNCROEMWAQZVUGVMADCUFZCHLJBIFVUCOMFZBTRRZUDAXVVQBTLSJYQZMFFPVIKXWIYKUOPBYQJFGBOXCPUNMNVXCPBBMNLTCXRJXVMMLCP";
    //string codestring="PCLMMVXJRXCTLNMBBPCXVNMNUPCXOBGFJQYBPOUKYIWXKIVPFFMZQYJSLTBQVVXADUZRRTBZFMOCUVFIBJLHCZFUCDAMVGUVZQAWMEORCNDMXFVQTFKUWXRYKHRXKJKDZPNMAULGYGUYHCLGZLFYSFGUYAEKMQTKDLYMSBTEPZDXXBFQRMSUDLVTTAEKKTCIVNNXYPDFXMJ";
 
    int PIvals[]={2,1,9,4,9,1,1,0,3,8,1,8,3,9,7,2,2,1,9,8,4,2,7,2,5,7,5,8,8,1,5,3,7,6,5,9,4,7,2,6,9,9,7,3,2,6,4,4,7,0,8,4,5,8,1,1,5,0,1,3,9,7,1,1,6,2,3,9,1,8,3,7,1,1,6,8,1,2,9,0,3,5,9,1,9,5,9,5,7,5,6,3,0,7,2,7,5,0,3,3,4,9,0,6,1,1,5,1,4,9,1,5,9,6,4,1,4,8,3,1,2,5,6,6,4,0,2,8,8,4,5,0,3,5,0,3,3,1,1,0,0,6,3,0,9,5,2,9,8,7,6,3,4,6,3,5,1,7,1,9,0,4,5,2,9,2,8,2,6,9,0,2,9,0,2,5,1,8,8,4,7,1,8,8,5,5,1,3,6,0,6,6,0,0,7,8,5,4,2,7,3,7,2,1,4,1,9,4,2,0,6,2,7,0,6,3,9,3,3,1,2,8,4,6,6,2,3,4,5,4,0,1,6,8,4,3,0,6,4,3,2,9,6,6,5,8,4,6,5,4,1,9,0,9,1,0,2,1,7,2,5,6,1,3,8,7,6,8,7,3,3,2,8,4,6,5,7,4,8,2,1,6,4,4,3,3,9,5,6,6,5,7,9,0,1,8,8,2,4,4,6,9,1,8,3,0,3,9,4,5,9,8,4,9,2,2,6,4,4,6,9,5,5,5,0,1,1,2,5,8,3,9,1,0,7,2,0,1,4,8,2,0,5,4,7,1,1,1,8,4,8,2,1,8,0,4,9,5,3,5,2,7,1,3,2,2,8,5,0,5,5,9,0,6,4,4,8,3,9,0,7,4,6,6,0,3,2,8,2,3,1,5,6,8,0,8,4,1,2,8,9,7,6,0,7,1,1,2,4,3,5,2,8,4,3,0,8,2,6,8,9,9,8,0,2,6,8,2,6,0,4,6,1,8,7,0,3,2,9,5,4,4,9,4,7,9,0,2,8,5,0,1,5,7,3,9,9,3,9,6,1,7,9,1,4,8,8,2,0,5,9,7,2,3,8,3,3,4,6,2,6,4,8,3,2,3,9,7,9,8,5,3,5,6,2,9,5,1,4,1,3};
@@ -153,9 +154,9 @@ myfile << i << "   ";
    for(j=0;j<=codestring.length();j++)      //ALTAR THIS FOR PART 5. NEED TO REUSE SAME 26 PI VALUES THROUGH ALL OF THE CIPHERTEXT. SEE CODE RIGHT ABOVE
     {
 
-      jcopy=j;    //USING A COPY OF j, because i need to increase jcopy until it hits 26, and then reset it to 0. I can't alter j itself or it screws things up.
+      //jcopy=j;    //USING A COPY OF j, because i need to increase jcopy until it hits 26, and then reset it to 0. I can't alter j itself or it screws things up.
 
-            tempvar=(alphabet1.find(codestring[jcopy]));  // compare letter position in code to letter position in alphabet, get position number
+            tempvar=(alphabet1.find(codestring[j]));  // compare letter position in code to letter position in alphabet, get position number
                                                                 // ALTERED FOR PART 5. OTHERWISE YOU JUST USE "j". Not jcopy. Just replace jcopy with "j" in every instance.
             finalval=(tempvar - (PIvals[i+jcopy]));   //SUBTRACT PI VALUE FROM LETTER VALUE IN ALPHABET. store that value in finalval, extra step but whatever
 
@@ -172,8 +173,9 @@ myfile << i << "   ";
 
             tempstring=tempstring+ alphabet1[finalval];  //add letter to string until complete
             PIstring=PIstring+ to_string(PIvals[i+jcopy]);    // CREATE PI STRING TO SEE WHAT PI VALUES WERE USED FOR EACH OUTPUT
+            jcopy++;
             if(jcopy%26==0)
-                jcopy=i;    //CHECK IF JCOPY IS AT 26 AND RESET TO I
+                jcopy=0;    //CHECK IF JCOPY IS AT 26 AND RESET TO I
 
     }
 
